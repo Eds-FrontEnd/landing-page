@@ -1,6 +1,11 @@
 :root {
+    /* Variáveis de Cores */
     --color-primary: #0c5275;
     --color-secondary: #1af12c; 
     --color-dark: #000000;
     --color-white: #ffffff;
+
+    /* --- Tipografia --- */
+  --font-main: 'Open Sans', sans-serif;
+
 }
