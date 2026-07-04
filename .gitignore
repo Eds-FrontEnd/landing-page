@@ -1,0 +1,72 @@
+# Dependências
+node_modules/
+
+# Build #
+dist/
+build/
+out/
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache
+.cache/
+.parcel-cache/
+.nx/
+.angular/
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+tmp/
+temp/
+*.tmp
+
+# TypeScript
+*.tsbuildinfo
+
+# Testes
+coverage/
+
+# Angular
+.angular/cache/
+.sass-cache/
+
+# React
+.next/
+.vercel/
+
+# Arquivos de configuração locais
+*.local
+
+# Relatórios
+report.html
+
+# Arquivos compactados
+*.zip
+*.tar
+*.gz 
+
+# Certificados e chaves
+*.pem
+*.key
+*.crt
