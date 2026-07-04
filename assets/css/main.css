@@ -1,0 +1,9 @@
+/* Base */
+@import url('base/reset.css');
+@import url('base/global.css');
+@import url('base/responsive.css');
+@import url('base/variables.css');
+
+/* Componentes */
+@import url('components/header.css');
+@import url('components/menu.css');
