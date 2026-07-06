@@ -1,7 +1,5 @@
 import { fetchProducts } from "../services/api.js";
-import { ENDPOINTS } from "../utils/constants.js";
-
-const PRODUCTS_PER_PAGE = 6;
+import { ENDPOINTS, PRODUCTS_PER_PAGE } from "../utils/constants.js";
 
 let products = [];
 let currentIndex = 0;
