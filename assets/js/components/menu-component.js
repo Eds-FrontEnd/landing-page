@@ -1,6 +1,6 @@
 class MenuComponent extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
             <nav class="menu" aria-label="Menu principal">
                 <ul class="menu__list">
                     <li class="menu__item">
@@ -14,8 +14,8 @@ class MenuComponent extends HTMLElement {
                     </li>
                 </ul>
             </nav>
-        `
-    }
+        `;
+  }
 }
 
-customElements.define('menu-component', MenuComponent);
+customElements.define("menu-component", MenuComponent);
