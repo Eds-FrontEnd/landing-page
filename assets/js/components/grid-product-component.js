@@ -1,6 +1,6 @@
 class GridProductComponent extends HTMLElement {
   connectedCallback() {
-    const { id, title, images, category, price } = this.product;
+    const { id, title, image, category, price } = this.product;
 
     this.innerHTML = `
       <article
@@ -9,14 +9,14 @@ class GridProductComponent extends HTMLElement {
       >
         <img
           class="product-card__image"
-          src="${images[0]}"
+          src="${image}"
           alt="${title}"
           loading="lazy"
         />
 
         <div class="product-card__content">
           <span class="product-card__category">
-            ${category.name}
+            ${category}
           </span>
 
           <h2
