@@ -14,6 +14,8 @@ export async function fetchProducts(endpoint) {
 
     return apiProduct;
   } catch (error) {
-    throw new Error(`Ops, deu ruim: ${error}`);
+    throw new Error(
+      `Ops! Não foi possível carregar os produtos no momento. Tente novamente mais tarde. ${error}`,
+    );
   }
 }

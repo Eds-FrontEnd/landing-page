@@ -6,26 +6,31 @@ let currentIndex = 0;
 
 export async function renderProducts() {
   const productsContainer = document.querySelector("#products");
+  const messageInfo = document.querySelector(".message-info");
 
-  products = await fetchProducts(ENDPOINTS.PRODUCTS);
+  try {
+    products = await fetchProducts(ENDPOINTS.PRODUCTS);
 
-  renderNextProducts(productsContainer);
-
-  const button = document.createElement("button");
-
-  button.type = "button";
-  button.textContent = "Ver mais";
-  button.className = "product-btn__plus";
-
-  button.addEventListener("click", () => {
     renderNextProducts(productsContainer);
 
-    if (currentIndex >= products.length) {
-      button.remove();
-    }
-  });
+    const button = document.createElement("button");
 
-  productsContainer.after(button);
+    button.type = "button";
+    button.textContent = "Ver mais";
+    button.className = "product-btn__plus";
+
+    button.addEventListener("click", () => {
+      renderNextProducts(productsContainer);
+
+      if (currentIndex >= products.length) {
+        button.remove();
+      }
+    });
+
+    productsContainer.after(button);
+  } catch (error) {
+    messageInfo.textContent = error.message;
+  }
 }
 
 function renderNextProducts(productsContainer) {
