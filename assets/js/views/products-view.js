@@ -7,6 +7,7 @@ let currentIndex = 0;
 export async function renderProducts() {
   const productsContainer = document.querySelector("#products");
   const messageInfo = document.querySelector(".message-info");
+  const messageError = document.querySelector(".message");
 
   try {
     products = await fetchProducts(ENDPOINTS.PRODUCTS);
@@ -30,6 +31,7 @@ export async function renderProducts() {
     productsContainer.after(button);
   } catch (error) {
     messageInfo.textContent = error.message;
+    messageError.style.display = "flex";
   }
 }
 

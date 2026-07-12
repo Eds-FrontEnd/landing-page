@@ -1,12 +1,5 @@
 class MessageInfoComponent extends HTMLElement {
   connectedCallback() {
-    const message = this.getAttribute("message");
-
-    if (!message) {
-      this.style.display = "none";
-      return;
-    }
-
     this.innerHTML = `
       <span class="message">
         <img
@@ -16,7 +9,7 @@ class MessageInfoComponent extends HTMLElement {
           height="216"
           loading="lazy"
         />
-        <h1 class="message-info">${message}</h1>
+        <h1 class="message-info"></h1>
       </span>
     `;
   }
