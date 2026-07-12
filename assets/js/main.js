@@ -6,6 +6,7 @@ import "./components/logo-component.js";
 import "./components/header-component.js";
 import "./components/grid-product-component.js";
 import "./components/message-info.js";
+import "./components/slogan-component.js";
 
 //Init
 async function initProducts() {
