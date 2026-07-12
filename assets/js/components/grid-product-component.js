@@ -11,6 +11,8 @@ class GridProductComponent extends HTMLElement {
           class="product-card__image"
           src="${image}"
           alt="${title}"
+          width="150"
+          height="150"
           loading="lazy"
         />
 
@@ -29,6 +31,7 @@ class GridProductComponent extends HTMLElement {
           <strong class="product-card__price">
             R$ ${price.toFixed(2).replace(".", ",")}
           </strong>
+          <button class="product-card__add">Eu quero!</button>
         </div>
       </article>
     `;

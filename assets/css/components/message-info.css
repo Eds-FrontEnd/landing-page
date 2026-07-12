@@ -1,5 +1,5 @@
 .message {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -9,11 +9,4 @@
 .message-info {
   max-width: 200px;
   font-size: 1rem;
-}
-
-@media screen and (max-width: 550px) {
-  .message {
-    display: flex;
-    flex-direction: column-reverse;
-  }
 }

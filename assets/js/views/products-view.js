@@ -17,7 +17,7 @@ export async function renderProducts() {
     const button = document.createElement("button");
 
     button.type = "button";
-    button.textContent = "Ver mais";
+    button.textContent = "Ver mais +";
     button.className = "product-btn__plus";
 
     button.addEventListener("click", () => {
