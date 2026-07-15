@@ -1,9 +1,21 @@
 :root {
-  /* Variáveis de Cores */
+  /* --- Variáveis de Cores --- */
   --color-primary: #0c5275;
   --color-secondary: #008000;
   --color-dark: #000000;
   --color-white: #ffffff;
+
+  /* Escala de Cinzas (Mapeados do seu carrinho) */
+  --color-gray-light: #fafafa;
+  --color-gray-border: #f0f0f0;
+  --color-gray-border-light: #f9f9f9;
+  --color-gray-hover: #e0e0e0;
+  --color-gray-text: #777777;
+  --color-gray-text-dark: #333333;
+
+  /* Transparências e Sombras */
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-shadow: rgba(0, 0, 0, 0.1);
 
   /* --- Tipografia --- */
   --font-main: "Open Sans", sans-serif;

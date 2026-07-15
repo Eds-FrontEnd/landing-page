@@ -31,10 +31,28 @@ class GridProductComponent extends HTMLElement {
           <strong class="product-card__price">
             R$ ${price.toFixed(2).replace(".", ",")}
           </strong>
-          <button class="product-card__add">Eu quero!</button>
+          <button 
+            class="product-card__add"
+            type="button">
+            Eu quero!
+          </button>
         </div>
       </article>
     `;
+
+    this.querySelector(".product-card__add").addEventListener("click", () => {
+      document.dispatchEvent(
+        new CustomEvent("add-to-cart", {
+          detail: {
+            id,
+            title,
+            image,
+            category,
+            price,
+          },
+        }),
+      );
+    });
   }
 }
 
