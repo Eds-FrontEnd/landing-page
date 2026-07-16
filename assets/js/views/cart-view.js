@@ -62,6 +62,22 @@ export class RenderCart extends HTMLElement {
     if (removeBtn && this._onRemoveProduct) {
       this._onRemoveProduct(Number(removeBtn.dataset.remove));
     }
+
+    const payBtn = target.closest(".cart__pay");
+
+    if (payBtn) {
+      document.dispatchEvent(
+        new CustomEvent("open-modal", {
+          detail: {
+            title: "Pedido realizado!",
+            subtitle: "Obrigado pela preferência!",
+            message: "Seu pedido foi enviado com sucesso.",
+          },
+        }),
+      );
+
+      return;
+    }
   }
 
   render({ products, isOpen, total }) {

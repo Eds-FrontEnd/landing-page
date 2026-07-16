@@ -8,6 +8,7 @@ import "./components/grid-product-component.js";
 import "./components/message-info-component.js";
 import "./components/slogan-component.js";
 import "./components/cart-component.js";
+import "./components/modal-component.js";
 
 //Init
 async function initProducts() {
