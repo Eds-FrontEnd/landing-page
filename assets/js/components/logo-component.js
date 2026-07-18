@@ -1,9 +1,9 @@
 class LogoComponent extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <a href="../../../index.html" class="header__logo">
+      <a href="./index.html" class="header__logo">
         <img
-          src="../../../assets/images/logo/freefashion_logo.png"
+          src="./assets/images/logo/freefashion_logo.png"
           class="logo__image"
           alt="Logo da FreeFashion"
           loading="lazy"
