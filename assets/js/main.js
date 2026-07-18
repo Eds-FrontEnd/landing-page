@@ -8,10 +8,12 @@ import "./components/message-info-component.js";
 import "./components/slogan-component.js";
 import "./components/cart-component.js";
 import "./components/modal-component.js";
+import "./components/whatsapp-component.js";
 
 //Pages
 import "./components/pages-components/home-page-component.js";
 import "./components/pages-components/register-page-component.js";
+import "./components/pages-components/contact-page-component.js";
 
 const currentPage = window.location.pathname.split("/").pop();
 

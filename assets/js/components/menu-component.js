@@ -52,7 +52,27 @@ class MenuComponent extends HTMLElement {
             }
           </li>
 
-          <a
+          ${
+            isLoggedIn
+              ? `
+      <span
+        class="menu__link menu__link--disabled"
+        aria-label="Usuário já autenticado"
+        aria-disabled="true"
+      >
+        <img
+          class="menu__icon"
+          src="assets/images/icons/login.svg"
+          alt=""
+          width="30"
+          height="30"
+          loading="lazy"
+          aria-hidden="true"
+        />
+      </span>
+    `
+              : `
+            <a
               class="menu__link"
               href="assets/pages/login/login-page.html"
               aria-label="Ir para a página de login"
@@ -67,6 +87,8 @@ class MenuComponent extends HTMLElement {
                 aria-hidden="true"
               />
             </a>
+    `
+          }
 
           <li class="menu__item">
             ${

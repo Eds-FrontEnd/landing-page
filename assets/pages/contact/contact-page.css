@@ -1,0 +1,132 @@
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--color-gray-border);
+}
+
+.contact__form {
+  width: 100%;
+  max-width: 420px;
+  min-width: 270px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1.2rem;
+  background-color: var(--color-white);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.contact__form .header__logo img {
+  width: 160px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+.contact__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.contact__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__label {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  padding: 0.65rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-gray-text-dark);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  border-radius: 7px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgb(12 82 117 / 15%);
+}
+
+.contact__feedback {
+  min-height: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--color-red);
+}
+
+.contact__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  min-width: 180px;
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: 11px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact__button:hover,
+.contact__button:focus-visible {
+  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+  transform: translateY(-1px);
+}
+
+.contact__button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.contact__button:focus-visible,
+.contact__input:focus-visible,
+.contact__textarea:focus-visible {
+  outline: none;
+}

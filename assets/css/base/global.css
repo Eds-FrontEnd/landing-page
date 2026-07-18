@@ -11,6 +11,7 @@ body {
   text-rendering: optimizeLegibility;
   background-color: var(--color-white);
   color: var(--color-black);
+  position: relative;
 }
 
 h1,
