@@ -10,7 +10,7 @@
 
 .register-or-login__form {
   width: 100%;
-  max-width: 265px;
+  max-width: 285px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,6 +45,8 @@
 }
 
 .register-or-login__group {
+  width: 100%;
+  min-width: 220px;
   display: flex;
   flex-direction: column;
 }
