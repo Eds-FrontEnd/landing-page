@@ -66,6 +66,22 @@ export class RenderCart extends HTMLElement {
     const payBtn = target.closest(".cart__pay");
 
     if (payBtn) {
+      localStorage.removeItem("cart-items");
+
+      document.dispatchEvent(new CustomEvent("cart-clear"));
+
+      document.dispatchEvent(
+        new CustomEvent("cart-updated", {
+          detail: {
+            totalItems: 0,
+          },
+        }),
+      );
+
+      if (this._onClose) {
+        this._onClose();
+      }
+
       document.dispatchEvent(
         new CustomEvent("open-modal", {
           detail: {

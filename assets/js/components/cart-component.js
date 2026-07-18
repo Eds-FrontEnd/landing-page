@@ -40,6 +40,13 @@ class CartComponent extends HTMLElement {
 
     document.addEventListener("add-to-cart", this.handleAddToCart);
     document.addEventListener("open-cart", this.handleOpenCart);
+
+    document.addEventListener("cart-clear", () => {
+      this.products = [];
+      this.isOpen = false;
+      this.updateUI();
+      this.dispatchCartEvent();
+    });
   }
 
   disconnectedCallback() {
