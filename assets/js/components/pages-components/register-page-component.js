@@ -18,7 +18,7 @@ class RegisterComponent extends HTMLElement {
           linkText: "Já tenho conta",
           linkHref: "../login/login-page.html",
           successTitle: "Cadastro realizado com sucesso!",
-          redirectHref: "../../login/login-page.html",
+          redirectHref: "../login/login-page.html",
         }
       : {
           title: "",
