@@ -50,6 +50,11 @@ class RegisterComponent extends HTMLElement {
 
     this.clearMessage();
 
+    if (this.form && !this.form.checkValidity()) {
+      this.form.reportValidity();
+      return;
+    }
+
     this.submitButton.disabled = true;
     this.submitButton.textContent = this.config.loading;
 
@@ -100,7 +105,7 @@ class RegisterComponent extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <form class="register-or-login__form" novalidate>
+      <form class="register-or-login__form">
         <h1 class="register-or-login__title">
           ${this.config.title}
         </h1>
