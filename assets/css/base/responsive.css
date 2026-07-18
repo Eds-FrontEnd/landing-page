@@ -1,10 +1,15 @@
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 912px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
   .slogan {
     display: none;
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 620px) {
   .header {
     min-width: 300px;
     flex-direction: column;
@@ -18,5 +23,17 @@
 @media (max-width: 550px) {
   .cart {
     width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  img.logo__image {
+    width: 145px;
+    height: auto;
+  }
+
+  .menu__item:nth-child(2),
+  .menu__item:nth-child(4) {
+    display: none;
   }
 }
