@@ -97,7 +97,7 @@ class ContactPageComponent extends HTMLElement {
           return;
         }
 
-        window.location.replace("../../../../index.html");
+        window.location.replace("../../../index.html");
       }, 2000);
     } catch (error) {
       this.showMessage(
