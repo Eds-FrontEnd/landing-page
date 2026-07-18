@@ -34,7 +34,7 @@ class MenuComponent extends HTMLElement {
             >
               <img
                 class="menu__icon"
-                src="assets/images/icons/home.svg"
+                src="./assets/images/icons/home.svg"
                 alt=""
                 width="30"
                 height="30"
@@ -48,7 +48,7 @@ class MenuComponent extends HTMLElement {
             ${
               isLoggedIn
                 ? `<span class="menu__link menu__link--welcome" id="welcome">Seja muito bem-vindo(a)!</span>`
-                : `<a href="assets/pages/register/register-page.html" class="menu__link" id="welcome">Inscreva-se</a>`
+                : `<a href="./assets/pages/register/register-page.html" class="menu__link" id="welcome">Inscreva-se</a>`
             }
           </li>
 
@@ -62,7 +62,7 @@ class MenuComponent extends HTMLElement {
       >
         <img
           class="menu__icon"
-          src="assets/images/icons/login.svg"
+          src="./assets/images/icons/login.svg"
           alt=""
           width="30"
           height="30"
@@ -74,12 +74,12 @@ class MenuComponent extends HTMLElement {
               : `
             <a
               class="menu__link"
-              href="assets/pages/login/login-page.html"
+              href="./assets/pages/login/login-page.html"
               aria-label="Ir para a página de login"
             >
               <img
                 class="menu__icon"
-                src="assets/images/icons/login.svg"
+                src="./assets/images/icons/login.svg"
                 alt=""
                 width="30"
                 height="30"
@@ -94,7 +94,7 @@ class MenuComponent extends HTMLElement {
             ${
               isLoggedIn
                 ? `<a href="#" class="menu__link" id="logout-btn">Sair</a>`
-                : `<a href="assets/pages/login/login-page.html" class="menu__link">Login</a>`
+                : `<a href="./assets/pages/login/login-page.html" class="menu__link">Login</a>`
             }
           </li>
         </ul>
@@ -105,7 +105,7 @@ class MenuComponent extends HTMLElement {
           aria-label="Abrir carrinho de compras"
         >
           <img
-            src="assets/images/icons/cart.svg"
+            src="./assets/images/icons/cart.svg"
             alt=""
             width="30"
             height="30"

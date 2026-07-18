@@ -103,7 +103,7 @@ export class RenderCart extends HTMLElement {
             aria-label="Fechar carrinho"
           >
             <img 
-              src="assets/images/icons/close.svg" 
+              src="./assets/images/icons/close.svg" 
               alt="" 
               aria-hidden="true" 
               width="30" 
@@ -148,7 +148,7 @@ export class RenderCart extends HTMLElement {
                               aria-label="Diminuir quantidade"
                             >
                               <img 
-                                src="assets/images/icons/minus.svg" 
+                                src="./assets/images/icons/minus.svg" 
                                 alt="" 
                                 aria-hidden="true" 
                                 width="30" 
@@ -169,7 +169,7 @@ export class RenderCart extends HTMLElement {
                               aria-label="Aumentar quantidade"
                             >
                               <img 
-                                src="assets/images/icons/plus.svg" 
+                                src="./assets/images/icons/plus.svg" 
                                 alt="" 
                                 aria-hidden="true" 
                                 width="30" 
@@ -186,7 +186,7 @@ export class RenderCart extends HTMLElement {
                               aria-label="Remover produto"
                             >
                               <img 
-                                src="assets/images/icons/trash.svg" 
+                                src="./assets/images/icons/trash.svg" 
                                 alt="" 
                                 aria-hidden="true" 
                                 width="23" 
@@ -207,7 +207,7 @@ export class RenderCart extends HTMLElement {
                       Seu carrinho está vazio.
                     </p>
                     <img 
-                      src="assets/images/icons/cart-empty.svg" 
+                      src="./assets/images/icons/cart-empty.svg" 
                       alt="" 
                       aria-hidden="true" 
                       width="64" 

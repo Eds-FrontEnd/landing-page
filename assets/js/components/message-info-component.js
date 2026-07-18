@@ -3,7 +3,7 @@ class MessageInfoComponent extends HTMLElement {
     this.innerHTML = `
       <span class="message">
         <img
-          src="assets/images/error/error.png"
+          src="./assets/images/error/error.png"
           alt="Erro ao carregar produtos"
           width="310"
           height="216"
