@@ -20,6 +20,14 @@ Antes de executar o projeto, certifique-se de possuir instalado:
 
 ---
 
+# 🌍 Demonstração Online
+
+Acesse a versão publicada da aplicação:
+
+https://eds-frontend.github.io/landing-page
+
+---
+
 # 🚀 Como executar o projeto
 
 1. Clone o repositório
