@@ -56,7 +56,7 @@ class ModalComponent extends HTMLElement {
               aria-label="Fechar modal"
             >
                <img 
-                    src="assets/images/icons/close.svg" 
+                    src="../../../assets/images/icons/close.svg" 
                     alt="" 
                     aria-hidden="true" 
                     width="30" 
