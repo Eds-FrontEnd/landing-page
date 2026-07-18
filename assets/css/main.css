@@ -12,3 +12,6 @@
 @import url("components/slogan.css");
 @import url("components/cart.css");
 @import url("components/modal.css");
+
+/* Page */
+@import url("../pages/register/register-page.css");
