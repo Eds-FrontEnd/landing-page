@@ -41,6 +41,25 @@ class GridProductComponent extends HTMLElement {
     `;
 
     this.querySelector(".product-card__add").addEventListener("click", () => {
+      // Verifica se o usuário está logado
+      const isLoggedIn = localStorage.getItem("userActive") !== null;
+
+      if (!isLoggedIn) {
+        // Se estiver deslogado, exibe o modal de forma educada e gentil
+        document.dispatchEvent(
+          new CustomEvent("open-modal", {
+            detail: {
+              title: "Quaaaaaaaase!",
+              subtitle: "Foi por pouco!",
+              message:
+                "O produto será seu, basta apenas logar ou criar uma conta",
+            },
+          }),
+        );
+        return; // Interrompe a execução para não adicionar ao carrinho
+      }
+
+      // Se estiver logado, segue o fluxo normal
       document.dispatchEvent(
         new CustomEvent("add-to-cart", {
           detail: {
