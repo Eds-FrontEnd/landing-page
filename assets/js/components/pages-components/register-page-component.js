@@ -137,7 +137,7 @@ class RegisterComponent extends HTMLElement {
             name="password"
             type="password"
             autocomplete="current-password"
-            minlength="8"
+            minlength="5"
             required
           />
         </div>
