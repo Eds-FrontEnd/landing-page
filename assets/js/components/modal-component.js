@@ -134,7 +134,8 @@ class ModalComponent extends HTMLElement {
   handleClose() {
     CartStorage.clear();
     this.close();
-    window.location.reload();
+
+    window.location.replace("../../../../index.html");
   }
 
   open() {

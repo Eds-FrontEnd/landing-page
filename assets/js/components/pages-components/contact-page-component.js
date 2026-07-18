@@ -90,15 +90,14 @@ class ContactPageComponent extends HTMLElement {
       setTimeout(() => {
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-        const newWindow = window.open(
-          whatsappUrl,
-          "_blank",
-          "noopener,noreferrer",
-        );
+        const newWindow = window.open(whatsappUrl, "noopener,noreferrer");
 
         if (!newWindow) {
-          window.location.href = whatsappUrl;
+          window.location.replace(whatsappUrl);
+          return;
         }
+
+        window.location.replace("../../../../index.html");
       }, 2000);
     } catch (error) {
       this.showMessage(

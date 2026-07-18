@@ -16,18 +16,18 @@ class RegisterComponent extends HTMLElement {
           button: "Cadastrar",
           loading: "Cadastrando...",
           linkText: "Já tenho conta",
-          linkHref: "/assets/pages/login/login-page.html",
+          linkHref: "../login/login-page.html",
           successTitle: "Cadastro realizado com sucesso!",
-          redirectHref: "/assets/pages/login/login-page.html", // Rota corrigida para o cadastro
+          redirectHref: "../../login/login-page.html",
         }
       : {
           title: "",
           button: "Entrar",
           loading: "Entrando...",
           linkText: "Criar nova conta",
-          linkHref: "/assets/pages/register/register-page.html",
+          linkHref: "../register/register-page.html",
           successTitle: "Login realizado com sucesso!",
-          redirectHref: "/",
+          redirectHref: "../../../index.html",
         };
 
     this.render();
@@ -63,14 +63,11 @@ class RegisterComponent extends HTMLElement {
 
     try {
       if (this.isRegisterPage) {
-        // Lógica de Cadastro
         await useRegister({ email, senha });
       } else {
-        // Lógica de Login (simulação com LocalStorage)
         await userLogin(email, senha);
       }
 
-      // Dispara o modal de sucesso configurado
       document.dispatchEvent(
         new CustomEvent("open-modal", {
           detail: {
@@ -81,9 +78,8 @@ class RegisterComponent extends HTMLElement {
 
       setTimeout(() => {
         window.location.assign(this.config.redirectHref);
-      }, 1500);
+      }, 3000);
     } catch (error) {
-      // Se for a página de login, personaliza o erro conforme solicitado
       if (!this.isRegisterPage) {
         this.showMessage("E-mail ou senha inválido.");
       } else {
@@ -106,12 +102,17 @@ class RegisterComponent extends HTMLElement {
   render() {
     this.innerHTML = `
       <form class="register-or-login__form">
+
         <h1 class="register-or-login__title">
           ${this.config.title}
         </h1>
 
         <div class="register-or-login__group">
-          <label class="register-or-login__label" for="email">
+
+          <label 
+            class="register-or-login__label" 
+            for="email"
+          >
             E-mail
           </label>
 
@@ -124,10 +125,16 @@ class RegisterComponent extends HTMLElement {
             minlength="8"
             required
           />
+
         </div>
 
+
         <div class="register-or-login__group">
-          <label class="register-or-login__label" for="password">
+
+          <label 
+            class="register-or-login__label" 
+            for="password"
+          >
             Senha
           </label>
 
@@ -140,7 +147,9 @@ class RegisterComponent extends HTMLElement {
             minlength="5"
             required
           />
+
         </div>
+
 
         <p
           id="message"
@@ -149,15 +158,26 @@ class RegisterComponent extends HTMLElement {
           aria-live="polite"
         ></p>
 
-        <button class="register-or-login__button" type="submit">
+
+        <button 
+          class="register-or-login__button" 
+          type="submit"
+        >
           ${this.config.button}
         </button>
 
+
         <p class="register-or-login__footer">
-          <a class="register-or-login__link" href="${this.config.linkHref}">
+
+          <a 
+            class="register-or-login__link" 
+            href="${this.config.linkHref}"
+          >
             ${this.config.linkText}
           </a>
+
         </p>
+
       </form>
     `;
   }

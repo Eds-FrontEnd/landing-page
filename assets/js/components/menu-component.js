@@ -29,7 +29,7 @@ class MenuComponent extends HTMLElement {
           <li class="menu__item">
             <a
               class="menu__link"
-              href="/"
+              href="/index.html"
               aria-label="Ir para a página inicial"
             >
               <img

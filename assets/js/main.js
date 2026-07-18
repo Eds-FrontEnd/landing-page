@@ -15,7 +15,7 @@ import "./components/pages-components/home-page-component.js";
 import "./components/pages-components/register-page-component.js";
 import "./components/pages-components/contact-page-component.js";
 
-const currentPage = window.location.pathname.split("/").pop();
+const currentPage = window.location.pathname.split("/index.html").pop();
 
 async function init() {
   try {
