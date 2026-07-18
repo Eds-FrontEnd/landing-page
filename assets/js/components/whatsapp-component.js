@@ -7,7 +7,7 @@ class WhatsappComponent extends HTMLElement {
         aria-label="Entre em contato"
       >
         <img
-          src="../../../../assets/images/icons/whatsapp.svg"
+          src="../../../assets/images/icons/whatsapp.svg"
           alt=""
           loading="lazy"
           width="60"
