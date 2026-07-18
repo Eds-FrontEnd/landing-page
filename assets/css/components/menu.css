@@ -5,6 +5,8 @@
 
 .menu__list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -20,8 +22,8 @@
 
 .menu__cart-badge {
   position: absolute;
-  top: -6px;
-  right: -8px;
+  top: -8px;
+  right: -10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,4 +36,8 @@
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1;
+}
+
+.menu__link {
+  color: var(--color-primary);
 }
