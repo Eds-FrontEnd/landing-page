@@ -20,19 +20,60 @@ class MenuComponent extends HTMLElement {
   }
 
   render() {
+    // Verifica se existe a sessão ativa no localStorage
+    const isLoggedIn = localStorage.getItem("userActive") !== null;
+
     this.innerHTML = `
       <nav class="menu" aria-label="Menu principal">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="#inicio" class="menu__link">Início</a>
+            <a
+              class="menu__link"
+              href="/"
+              aria-label="Ir para a página inicial"
+            >
+              <img
+                class="menu__icon"
+                src="assets/images/icons/home.svg"
+                alt=""
+                width="30"
+                height="30"
+                loading="lazy"
+                aria-hidden="true"
+              />
+            </a>
+            
+          </li>
+          <li class="menu__item">
+            ${
+              isLoggedIn
+                ? `<span class="menu__link menu__link--welcome" id="welcome">Seja muito bem-vindo(a)!</span>`
+                : `<a href="assets/pages/register/register-page.html" class="menu__link" id="welcome">Inscreva-se</a>`
+            }
           </li>
 
-          <li class="menu__item">
-            <a href="#conceito" class="menu__link">Inscreva-se</a>
-          </li>
+          <a
+              class="menu__link"
+              href="assets/pages/login/login-page.html"
+              aria-label="Ir para a página de login"
+            >
+              <img
+                class="menu__icon"
+                src="assets/images/icons/login.svg"
+                alt=""
+                width="30"
+                height="30"
+                loading="lazy"
+                aria-hidden="true"
+              />
+            </a>
 
           <li class="menu__item">
-            <a href="#produtos" class="menu__link">Saiba mais</a>
+            ${
+              isLoggedIn
+                ? `<a href="#" class="menu__link" id="logout-btn">Sair</a>`
+                : `<a href="assets/pages/login/login-page.html" class="menu__link">Login</a>`
+            }
           </li>
         </ul>
 
@@ -67,6 +108,13 @@ class MenuComponent extends HTMLElement {
 
     document.addEventListener("cart-updated", ({ detail }) => {
       this.updateBadge(detail.totalItems);
+    });
+
+    // Evento para limpar o localStorage e deslogar
+    this.querySelector("#logout-btn")?.addEventListener("click", (event) => {
+      event.preventDefault();
+      localStorage.removeItem("userActive");
+      window.location.reload();
     });
   }
 
