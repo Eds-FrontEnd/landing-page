@@ -33,7 +33,7 @@ https://eds-frontend.github.io/landing-page
 1. Clone o repositório
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/Eds-FrontEnd/landing-page
 ```
 
 2. Acesse a pasta
