@@ -19,6 +19,12 @@ class ModalComponent extends HTMLElement {
     const subtitle = this.getAttribute("subtitle") || "";
     const message = this.getAttribute("msg") || "";
 
+    const isHomePage =
+      window.location.pathname.endsWith("/") ||
+      window.location.pathname.endsWith("index.html");
+
+    const basePath = isHomePage ? "./" : "../../../";
+
     this.innerHTML = `
       <section
         class="modal"
@@ -41,13 +47,13 @@ class ModalComponent extends HTMLElement {
                 ${title}
               </h2>
 
-             <p
+              <p
                 id="modal-subtitle"
                 class="modal__subtitle"
                 ${subtitle ? "" : "hidden"}
-                >
+              >
                 ${subtitle}
-            </p>
+              </p>
             </div>
 
             <button
@@ -55,15 +61,15 @@ class ModalComponent extends HTMLElement {
               type="button"
               aria-label="Fechar modal"
             >
-               <img 
-                    src="../../../assets/images/icons/close.svg" 
-                    alt="" 
-                    aria-hidden="true" 
-                    width="30" 
-                    height="30" 
-                    loading="lazy" 
-                    style="pointer-events: none;"
-                />
+              <img 
+                src="${basePath}assets/images/icons/close.svg"
+                alt=""
+                aria-hidden="true"
+                width="30"
+                height="30"
+                loading="lazy"
+                style="pointer-events: none;"
+              />
             </button>
           </header>
 
@@ -94,7 +100,6 @@ class ModalComponent extends HTMLElement {
   }
 
   handleOpenModal(event) {
-    console.log(event.detail);
     const detail = event.detail || {};
 
     const title = this.querySelector("#modal-title");
@@ -135,7 +140,11 @@ class ModalComponent extends HTMLElement {
     CartStorage.clear();
     this.close();
 
-    window.location.replace("../../../../index.html");
+    window.location.replace(
+      window.location.pathname.endsWith("/")
+        ? "./index.html"
+        : "../../../index.html",
+    );
   }
 
   open() {
@@ -143,7 +152,7 @@ class ModalComponent extends HTMLElement {
       return;
     }
 
-    this.lastFocusedElement = document.activeElement;
+    this.lastFocusedElement = document.activeDocument;
 
     this.modal.hidden = false;
 
